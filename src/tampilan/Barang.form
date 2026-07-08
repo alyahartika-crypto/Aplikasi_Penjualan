@@ -38,11 +38,11 @@
                               </Group>
                               <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtkd" max="32767" attributes="0"/>
-                                  <Component id="txnm" max="32767" attributes="0"/>
+                                  <Component id="txtkode" max="32767" attributes="0"/>
+                                  <Component id="txtnama" max="32767" attributes="0"/>
                                   <Component id="cbjenis" alignment="0" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Component id="txtbeli" max="32767" attributes="0"/>
-                                  <Component id="txtjual" pref="226" max="32767" attributes="0"/>
+                                  <Component id="txthb" max="32767" attributes="0"/>
+                                  <Component id="txthj" pref="226" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -83,12 +83,12 @@
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtkd" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtkode" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txnm" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtnama" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -98,11 +98,11 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtbeli" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txthb" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtjual" min="-2" max="-2" attributes="0"/>
+                  <Component id="txthj" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -174,11 +174,14 @@
         <Property name="text" type="java.lang.String" value="Harga Jual"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtkd">
-    </Component>
-    <Component class="javax.swing.JTextField" name="txnm">
+    <Component class="javax.swing.JTextField" name="txtkode">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txnmActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtkodeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtnama">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtnamaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="cbjenis">
@@ -194,9 +197,15 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtbeli">
+    <Component class="javax.swing.JTextField" name="txthb">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txthbActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtjual">
+    <Component class="javax.swing.JTextField" name="txthj">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txthjActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSimpan">
       <Properties>

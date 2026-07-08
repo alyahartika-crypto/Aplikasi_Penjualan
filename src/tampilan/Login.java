@@ -120,6 +120,9 @@ public class Login extends javax.swing.JFrame {
             
                 if (hasil.next()) {
                     JOptionPane.showMessageDialog(null, "Login Berhasil! Selamat Datang, " + hasil.getString("nama_kasir"));
+                    new MenuUtama().setVisible(true);
+                    this.dispose();
+                    
                     MenuUtama utama = new MenuUtama(); 
                     utama.setVisible(true);
                     this.dispose(); 

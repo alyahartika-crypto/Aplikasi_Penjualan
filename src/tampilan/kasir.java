@@ -32,11 +32,11 @@ public class kasir extends javax.swing.JFrame {
     }
 
     protected void aktif() {
-        txtid.requestFocus();
+        txtidkasir.requestFocus();
     }
 
     protected void kosong() {
-        txtid.setText("");
+        txtidkasir.setText("");
         txtnm.setText("");
         buttonGroup1.clearSelection();
         cbagama.setSelectedIndex(0);
@@ -88,7 +88,7 @@ public class kasir extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtid = new javax.swing.JTextField();
+        txtidkasir = new javax.swing.JTextField();
         txtnm = new javax.swing.JTextField();
         rblakilaki = new javax.swing.JRadioButton();
         rbperempuan = new javax.swing.JRadioButton();
@@ -142,7 +142,7 @@ public class kasir extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setText("Alamat");
 
-        txtid.addActionListener(this::txtidActionPerformed);
+        txtidkasir.addActionListener(this::txtidkasirActionPerformed);
 
         rblakilaki.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         rblakilaki.setText("Laki-Laki");
@@ -221,7 +221,7 @@ public class kasir extends javax.swing.JFrame {
                                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtid)
+                                    .addComponent(txtidkasir)
                                     .addComponent(txtnm)
                                     .addComponent(cbagama, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
@@ -266,7 +266,7 @@ public class kasir extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txtid))
+                    .addComponent(txtidkasir))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -317,7 +317,7 @@ public class kasir extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
+    private void txtidkasirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidkasirActionPerformed
 
         String jenisKelamin = "";
         if (rblakilaki.isSelected()) {
@@ -331,7 +331,7 @@ public class kasir extends javax.swing.JFrame {
         try {
             PreparedStatement stat = conn.prepareStatement(sql);
         
-            stat.setString(1, txtid.getText());
+            stat.setString(1, txtidkasir.getText());
             stat.setString(2, txtnm.getText());
             stat.setString(3, jenisKelamin);
             stat.setString(4, cbagama.getSelectedItem().toString());
@@ -348,7 +348,7 @@ public class kasir extends javax.swing.JFrame {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Data Gagal Disimpan! Error: " + e.getMessage());
         }
-    }//GEN-LAST:event_txtidActionPerformed
+    }//GEN-LAST:event_txtidkasirActionPerformed
 
     private void btnsimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsimpanActionPerformed
         String jenisKelamin = "";
@@ -364,7 +364,7 @@ public class kasir extends javax.swing.JFrame {
         try {
             PreparedStatement stat = conn.prepareStatement(sql);
         
-            stat.setString(1, txtid.getText());
+            stat.setString(1, txtidkasir.getText());
             stat.setString(2, txtnm.getText());
             stat.setString(3, jenisKelamin);
             stat.setString(4, cbagama.getSelectedItem().toString());
@@ -415,7 +415,7 @@ public class kasir extends javax.swing.JFrame {
             stat.setString(3, cbagama.getSelectedItem().toString());
             stat.setString(4, txtalamat.getText());
             stat.setString(5, txtnotlp.getText());
-            stat.setString(6, txtid.getText()); 
+            stat.setString(6, txtidkasir.getText()); 
 
             stat.executeUpdate(); 
             JOptionPane.showMessageDialog(null, "Data Berhasil Diubah!");
@@ -429,7 +429,7 @@ public class kasir extends javax.swing.JFrame {
     private void btnhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhapusActionPerformed
         int ok = JOptionPane.showConfirmDialog(null, "Hapus data ini?", "Konfirmasi Menghapus", JOptionPane.YES_NO_OPTION);
         if (ok == 0) {
-            String sql = "DELETE FROM kasir WHERE id_kasir='" + txtid.getText() + "'";
+            String sql = "DELETE FROM kasir WHERE id_kasir='" + txtidkasir.getText() + "'";
             try {
                 Statement stat = conn.createStatement();
                 stat.executeUpdate(sql);
@@ -477,7 +477,7 @@ public class kasir extends javax.swing.JFrame {
     private javax.swing.JTable tblkasir;
     private javax.swing.JTextArea txtalamat;
     private javax.swing.JButton txtcari;
-    private javax.swing.JTextField txtid;
+    private javax.swing.JTextField txtidkasir;
     private javax.swing.JTextField txtnm;
     private javax.swing.JTextField txtnotlp;
     private javax.swing.JPasswordField txtpassword;
